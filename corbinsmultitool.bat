@@ -15,7 +15,7 @@ echo 4 - Remotely shutdown a PC on a school network
 echo 5 - Cancel
 echo ===========================================================================================================
 set /p Home= Command: 
-if %Home%==1 goto webpagetest
+if %Home%==1 goto servertest
 if %Home%==2 goto note
 if %Home%==3 goto wifitest
 if %Home%==4 goto kill
@@ -28,15 +28,16 @@ goto home
 
 :servertest
 cls
-set /p page= Enter the webpage you would like to test: 
+set /p page= Enter the server you would like to test: 
 cls
-echo Checking the entered webpage...
+echo Checking "%page%" (this may take a bit.)
 ping %page%>nul
 cls
 if errorlevel 1 (
-echo The webpage is offline
-) else echo The webpage is online
+echo The server "%page%" is offline
+) else echo The server "%page%" is online
 pause
+goto home
 
 
 :cancel
@@ -44,7 +45,8 @@ exit
 
 
 :note
-set /p note= Note:
+cls
+set /p note= Enter your note: 
 set /p name= Enter what you want to name your file: 
 echo %note% >> %name%.txt
 pause
@@ -89,7 +91,7 @@ echo Hello %username%!
 echo.
 echo Commands:
 echo.
-echo 1 - Check if a webpage is online
+echo 1 - Check if a server is online
 echo 2 - Make a note in this folder
 echo 3 - Test your wifi connection
 echo 4 - Remotely shutdown a PC on a school network
@@ -104,19 +106,22 @@ if %Home%==3 goto wifitestdebug
 if %Home%==4 goto killdebug
 if %Home%==5 goto canceldebug
 if %Home%==debugexit goto debugexit
+echo That is an invalid command.
+pause
+goto homedebug
 
 
 :servertestdebug
 cls
-set /p page= Enter the webpage you would like to test: 
+set /p page= Enter the server you would like to test: 
 cls
-echo Checking the entered webpage...
-ping %page%
+echo Checking "%page" (this may take a bit.)
 cls
 if errorlevel 1 (
-echo The webpage is offline
-) else echo The webpage is online
+echo The server "%page%" is offline
+) else echo The server "%page%" is online
 pause
+goto home
 
 
 :canceldebug
@@ -124,7 +129,7 @@ exit
 
 
 :notedebug
-set /p note= Note:
+set /p note= Enter your note: 
 set /p name= Enter what you want to name your file: 
 echo %note% >> %name%.txt
 pause

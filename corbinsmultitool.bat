@@ -4,7 +4,6 @@ color 0a
 title Corbin's Multitool - Home Page
 echo ===========================================================================================================
 echo Hello %username%!
-echo
 echo.
 echo Commands:
 echo.

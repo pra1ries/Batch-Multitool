@@ -129,7 +129,7 @@ goto secretcmds
 :info
 cls
 title Corbin's Multitool - Showing version info
-echo Multitool v3.0
+echo Multitool v4.0
 echo.
 echo Changelog:
 echo Removed debug mode.

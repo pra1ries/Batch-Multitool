@@ -188,13 +188,18 @@ if %scmd%==3 goto ipclip
 if %scmd%==4 goto kali
 if %scmd%==5 goto what
 if %scmd%==6 goto credits
-if %scmd%==7 goto cancel
+if %scmd%==7 goto canceldebg
 if %scmd%==hist goto history
 if %scmd%==info goto info
 echo That is not a valid command!
 pause
 goto secretcmds
 
+:canceldebg
+goto home
+echo Something went wrong.
+timeout 2 /NOBREAK >nul
+goto secretcmds
 
 :matrix
 echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%s%random%%random%
@@ -290,7 +295,7 @@ echo Oopsie! All your files have been encrypted by my virus...
 echo.
 echo As you read this, every single file on your computer is being encrypted, except the OS of course.
 echo.
-echo The only way you can get your files back is paying me a... small fee...
+echo The only way you can get your files back is paying me a small fee.
 echo.
 echo How about $500?
 echo.

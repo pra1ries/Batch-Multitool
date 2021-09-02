@@ -22,9 +22,10 @@ echo.
 echo 1 - Check if a server is online [beta]
 echo 2 - Make a note in this folder
 echo 3 - Test your wifi connection
-echo 4 - Remotely shutdown a PC on a school network [beta]
+echo 4 - Remotely shutdown a PC on a LAN network [beta]
 echo 5 - User info on this PC
-echo 6 - Cancel
+echo 6 - Generate a random number.
+echo 7 - Cancel
 echo ===========================================================================================================
 set /p Home= Command: 
 if %Home%==1 goto servertest
@@ -32,13 +33,23 @@ if %Home%==2 goto note
 if %Home%==3 goto wifitest
 if %Home%==4 goto kill
 if %Home%==5 goto users
-if %Home%==6 goto cancel
+if %Home%==6 goto randnum
+if %Home%==7 goto cancel
 if %Home%==hist goto history
 if %Home%==info goto info
 if %Home%==thisisasecret goto secret
 echo That is an invalid command.
 pause
 goto home
+
+:randnum
+title Corbin's Multitool - Generating a random number
+cls
+echo %random%
+echo Number Generated successfully!
+pause
+goto home
+
 
 
 :servertest
@@ -91,7 +102,7 @@ goto home
 
 :kill
 cls
-title Corbin's Multitool - Shutting down computers on a school network
+title Corbin's Multitool - Shutting down computers on a LAN network
 echo Click "Browse" to select computers to shut down.
 echo This option is still in beta, so it may or may not work, please report issues on the github page:
 echo github.com/CorbinMakesStuff/batch-multitool

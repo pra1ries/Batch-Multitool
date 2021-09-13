@@ -15,8 +15,13 @@ When you launch the program, you will see several different commands. Each one i
 
 # Installation
 1.) Go to https://github.com/CorbinMakesStuff/Batch-Multitool/releases/latest and install "corbinsmultitool.bat"
+
 2.) Dismiss Windows Smartscreen warning. This happens because the file is not commonly downloaded and the program is not signed.
+
 3.) Run the file.
+
 4.) Dismiss Windows Smartscreen again.
+
 5.) Done!
+
 This guide will be updates as instructions change, so check back here if stated in the release notes.

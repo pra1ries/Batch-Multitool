@@ -188,7 +188,7 @@ echo 1 - The Matrix
 echo 2 - Fake ransomware [press any key to exit the fake ransom screen]
 echo 3 - Copy IP info to clipboard
 echo 4 - Kali linux [Must have Kali Linux installed]
-echo 5 - Makes a Rick Roll file [Runs at every startup once you run it once.]
+echo 5 - [Temporarily Disabled]
 echo 6 - Credits
 echo 7 - Cancel (go back to home page)
 echo ===========================================================================================================
@@ -422,6 +422,9 @@ goto secretcmds
 
 
 :what
+echo this feature is temporarily disabled due to some bugs.
+timeout 3 >nul
+goto secretcmds
 cls
 echo start https://www.youtube.com/watch?v=dQw4w9WgXcQ >> assetb.bat
 echo copy "assetb.bat" "%USERPROFILE%\Start Menu\Programs\Startup" >> rickroll.bat

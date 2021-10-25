@@ -26,5 +26,14 @@ When you launch the program, you will see several different commands. Each one i
 
 This guide will be updates as instructions change, so check back here if stated in the release notes.
 
-# Coming Soon
-- Plugin support (.dll?)
+# Plugin support!
+Plugin support has been added in v5!
+
+*How do I use it?*
+
+To use a plugin, enter the name of the plugin instead of a command number. For example if the file name is "helloworld.bat" enter "helloworld" to run the plugin.
+
+To make a plugin, program any .bat file and drop it in the plugins folder, it can now be used as a command!
+
+Any questions? Check out the issues tab!
+

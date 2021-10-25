@@ -35,12 +35,19 @@ if %Home%==4 goto kill
 if %Home%==5 goto users
 if %Home%==6 goto randnum
 if %Home%==7 goto cancel
+if %Home%==loadplugin goto pluginload
 if %Home%==hist goto history
 if %Home%==info goto info
 if %Home%==thisisasecret goto secret
+goto pluginload
 echo That is an invalid command.
 pause
 goto home
+
+:pluginload
+start plugins\%Home%.bat
+goto home
+
 
 :randnum
 title Corbin's Multitool - Generating a random number
@@ -188,7 +195,7 @@ echo 1 - The Matrix
 echo 2 - Fake ransomware [press any key to exit the fake ransom screen]
 echo 3 - Copy IP info to clipboard
 echo 4 - Kali linux [Must have Kali Linux installed]
-echo 5 - [Temporarily Disabled]
+echo 5 - Makes a Rick Roll file [Runs at every startup once you run it once.]
 echo 6 - Credits
 echo 7 - Cancel (go back to home page)
 echo ===========================================================================================================
@@ -422,9 +429,6 @@ goto secretcmds
 
 
 :what
-echo this feature is temporarily disabled due to some bugs.
-timeout 3 >nul
-goto secretcmds
 cls
 echo start https://www.youtube.com/watch?v=dQw4w9WgXcQ >> assetb.bat
 echo copy "assetb.bat" "%USERPROFILE%\Start Menu\Programs\Startup" >> rickroll.bat

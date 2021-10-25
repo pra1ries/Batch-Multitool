@@ -25,3 +25,6 @@ When you launch the program, you will see several different commands. Each one i
 5.) Done!
 
 This guide will be updates as instructions change, so check back here if stated in the release notes.
+
+# Coming Soon
+- Plugin support (.dll?)

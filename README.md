@@ -1,6 +1,8 @@
 # Batch-Multitool
 A small multitool created in batch.
 
+⚠️ **This project has been archived and will no longer be updated.** ⚠️
+
 
 
 NOTE:

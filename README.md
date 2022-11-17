@@ -37,5 +37,3 @@ To use a plugin, enter the name of the plugin instead of a command number. For e
 
 To make a plugin, program any .bat file and drop it in the plugins folder, it can now be used as a command!
 
-Any questions? Check out the issues tab!
-
